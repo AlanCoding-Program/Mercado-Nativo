@@ -1,6 +1,4 @@
-//Agregar productos, Aumentar cantidades, Eliminar productos, Vaciar el carrito, Calcular automáticamente el total
-
-import { createContext, useContext, useState } from "react";
+//Agregar productos, Aumentar cantidades, Eliminar productos, Vaciar el carrito, Calcular automáticamente el totaimport { createContext, useContext, useState } from "react";
 
 const CarritoContext = createContext();
 
@@ -41,33 +39,13 @@ export function CarritoProvider({ children }) {
     );
   };
 
-  const vaciarCarrito = () => {
-    setCarrito([]);
-  };
-
-  const cantidadTotal = carrito.reduce(
-    (total, item) => total + item.cantidad,
-    0
-  );
-
-  const total = carrito.reduce(
-    (suma, item) => suma + item.precio * item.cantidad,
-    0
-  );
+  const vaciarCarrito = () => { setCarrito([]);};
+  const cantidadTotal = carrito.reduce((total, item) => total + item.cantidad,0);
+  const total = carrito.reduce((suma, item) => suma + item.precio * item.cantidad, 0);
 
   return (
     <CarritoContext.Provider
-      value={{
-        carrito,
-        agregarAlCarrito,
-        eliminarDelCarrito,
-        cambiarCantidad,
-        vaciarCarrito,
-        cantidadTotal,
-        total,
-      }}
-    >
-      {children}
+      value={{carrito, agregarAlCarrito, eliminarDelCarrito, cambiarCantidad, vaciarCarrito, cantidadTotal, total,}}> {children}
     </CarritoContext.Provider>
   );
 }

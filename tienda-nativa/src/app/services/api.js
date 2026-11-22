@@ -1,11 +1,20 @@
 const API_URL = "http://192.168.0.10:3000";
-//la dirección 192.168.0.10 es provisoria, hay que reemplazarla por la real del back ALAN
 
 export async function obtenerProductos() {
   const respuesta = await fetch(`${API_URL}/productos`);
 
   if (!respuesta.ok) {
-    throw new Error("No se pudieron obtener los productos");
+    throw new Error("No se pudieron cargar los productos");
+  }
+
+  return await respuesta.json();
+}
+
+export async function obtenerProducto(id) {
+  const respuesta = await fetch(`${API_URL}/productos/${id}`);
+
+  if (!respuesta.ok) {
+    throw new Error("No se pudo obtener el producto");
   }
 
   return await respuesta.json();
@@ -14,9 +23,7 @@ export async function obtenerProductos() {
 export async function realizarCheckout(datosCompra) {
   const respuesta = await fetch(`${API_URL}/checkout`, {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
+    headers: {"Content-Type": "application/json",},
     body: JSON.stringify(datosCompra),
   });
 
@@ -28,3 +35,6 @@ export async function realizarCheckout(datosCompra) {
 
   return datos;
 }
+
+// Dejo preparado el servicio para que despues se comunique con el backend de mi amigo lalan
+// La direccion ip es proviosria, despues cambiala cuando funcione el backend por la real
