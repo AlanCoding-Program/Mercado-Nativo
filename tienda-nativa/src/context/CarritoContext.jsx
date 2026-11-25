@@ -1,4 +1,6 @@
-//Agregar productos, Aumentar cantidades, Eliminar productos, Vaciar el carrito, Calcular automáticamente el totaimport { createContext, useContext, useState } from "react";
+// Agregar productos, aumentar cantidades, eliminar productos, vaciar el carrito y calcular el total
+
+import { createContext, useContext, useState } from "react";
 
 const CarritoContext = createContext();
 

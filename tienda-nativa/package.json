@@ -29,8 +29,7 @@
   },
   "devDependencies": {
     "@types/react": "~19.3.0",
-    "typescript": "~6.0.3",
-    "@types/bun": "latest"
+    "typescript": "~6.0.3"
   },
   "scripts": {
     "start": "expo start",

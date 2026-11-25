@@ -177,6 +177,7 @@ export const estilos = StyleSheet.create({
 
   catalogo: {
     paddingBottom: 25,
+    paddingHorizontal: 12
   },
 
   filaProductos: {
@@ -195,6 +196,7 @@ export const estilos = StyleSheet.create({
     shadowOpacity: 0.07,
     shadowRadius: 5,
     shadowOffset: { width: 0, height: 2 },
+    maxWidth: "50%"
   },
 
   imagenProducto: {
@@ -508,6 +510,8 @@ export const estilos = StyleSheet.create({
   textoBarraActivo: {
     color: colores.primario,
     fontWeight: "bold",
+    fontSize: 11,
+    marginTop: 4
   },
 
   confirmacion: {
