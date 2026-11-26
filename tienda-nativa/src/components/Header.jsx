@@ -1,3 +1,4 @@
+import { View, Text, Pressable } from "react-native";
 import { useRouter } from "expo-router";
 import { useCarrito } from "@/context/CarritoContext";
 import { estilos } from "@/styles/styles";

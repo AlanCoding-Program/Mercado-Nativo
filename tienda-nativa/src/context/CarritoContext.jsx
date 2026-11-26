@@ -15,9 +15,7 @@ export function CarritoProvider({ children }) {
 
       if (existente) {
         return actual.map((item) =>
-          item.id === producto.id
-            ? { ...item, cantidad: item.cantidad + 1 }
-            : item
+          item.id === producto.id ? { ...item, cantidad: item.cantidad + 1 } : item
         );
       }
 
@@ -47,7 +45,7 @@ export function CarritoProvider({ children }) {
 
   return (
     <CarritoContext.Provider
-      value={{carrito, agregarAlCarrito, eliminarDelCarrito, cambiarCantidad, vaciarCarrito, cantidadTotal, total,}}> {children}
+      value={{carrito, agregarAlCarrito, eliminarDelCarrito, cambiarCantidad, vaciarCarrito, cantidadTotal, total,}}>{children}
     </CarritoContext.Provider>
   );
 }
