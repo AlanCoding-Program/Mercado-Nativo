@@ -149,7 +149,6 @@ export default function PantallaCarrito() {
 
                 <View style={{ marginTop: 15 }}>
                   <Boton titulo="Vaciar carrito" onPress={vaciarCarrito} secundario/>
-                  <Boton titulo="Finalizar compra" onPress={() => router.push("/checkout")}/>
                 </View>
               </View>
 

@@ -11,7 +11,6 @@ export default function RootLayout() {
           <Stack.Screen name="favoritos" />
           <Stack.Screen name="carrito" />
           <Stack.Screen name="detalle/[id]" />
-          <Stack.Screen name="checkout" />
         </Stack>
       </FavoritosProvider>
     </CarritoProvider>
